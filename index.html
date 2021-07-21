@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" type="module"></script>
+  <title>Minesweeper</title>
+</head>
+<body>
+  <h3 class="title">Kobi's Minesweeper</h3>
+  <h5 class = "prompt">Select a difficulty:</h5>
+<div>
+  <input id="level1" type="button" value="Begginer" onclick="buildBoard(4, 2)" />
+  <input id="level2" type="button" value="Medium" onclick="buildBoard(8, 12)" />
+  <input id="level3" type="button" value="Expert" onclick="buildBoard(12, 30)" />
+</div>
+<img class="resize" src="IMG\47416-2-smiley-image-free-png-hq.png">
+  <div class="subtext">
+    Mines Left: <span data-mine-count></span>
+  </div>
+  <div class="board"></div>
+  <br>
+  <div id="lost" style="display: none;">
+    <img class="resize" src="IMG\10-2-unamused-face-emoji-png.png">
+    <h3>You got bombed!</h3>
+    <button id="new-game-button" type="button" onclick="reload()">Start Again</button>
+  </div>
+</body>
+</html>
